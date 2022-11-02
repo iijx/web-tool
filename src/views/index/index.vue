@@ -3,9 +3,9 @@ import useResolution from './use-resolution';
 import html2canvas from 'html2canvas';
 
 const form = reactive({
-  background: '#ff0000',
+  background: '#00BAAD',
   isRead: false,
-  textA: 'hello world',
+  textA: 'console 使用提速',
   textB: '',
   textC: ''
 })
@@ -38,7 +38,7 @@ const downloadBtn = () => {
       <a-row class="grid-demo" :gutter="24">
         <a-col :span="12">
           <section class="canvas-dom" id="canvas-dom1" :style="style">
-            <div class="textA">{{form.textA}}</div>
+            <div class="textA ">{{form.textA}}</div>
             <div class="textB">{{form.textB}}</div>
             <div class="textC">{{form.textC}}</div>
           </section>
@@ -90,10 +90,13 @@ const downloadBtn = () => {
     width: 100%;
     height: 100%;
     color: #fff;
-    font-size: 20px;
+    font-size: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+    // -webkit-text-stroke: 2px #000;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+
   }
   .textB {
     position: absolute;
@@ -114,11 +117,12 @@ const downloadBtn = () => {
     color: #fff;
     width: 20%;
     background: rgba(0, 0, 0, .5);
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.8;
   }
 }
 </style>
